@@ -1,0 +1,3 @@
+{:min-bb-version "0.7.8"
+ :tasks
+ {speedback (load-file "speedback.clj")}}
