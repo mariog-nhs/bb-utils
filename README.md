@@ -4,7 +4,7 @@ Where bb stands for Babashka (therefore, you need to install Clojure and Babashk
 
 ## Clojure? Babashka? What?
 
-OK, let me explain the buzzwords...
+OK, let me explain the buzzwords; else, you can jump to the [tasks section](#tasks).
 
 ### Clojure
 
