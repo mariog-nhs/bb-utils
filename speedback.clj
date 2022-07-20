@@ -5,9 +5,6 @@
 (defn evenify [coll default]
   (if (even? (count coll)) coll (cons default coll)))
 
-;; Logic of the next two methods taken here
-;; https://stackoverflow.com/questions/41896889/algorithm-to-schedule-people-to-an-activity-that-should-be-done-in-pairs#41897430
-;; https://en.wikipedia.org/wiki/Round-robin_tournament#Scheduling_algorithm
 (defn rotate-for-next-round [[anchor & to-cycle :as coll]]
   (cons anchor (take (count to-cycle) (rest (cycle to-cycle)))))
 
@@ -27,8 +24,8 @@
 (defn format-pair [pair]
   (join "/" pair))
 
-(defn format-line [line]
-  (join ", " (map format-pair line)))
+(defn format-line [pairs]
+  (join ", " (map format-pair pairs)))
 
 (defn format-schedule [lines]
   (join "\n" (map format-line lines)))
