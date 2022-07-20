@@ -1,3 +1,4 @@
 {:min-bb-version "0.7.8"
  :tasks
- {speedback (load-file "speedback.clj")}}
+ {pull-all (load-file "pull-all.clj")
+  speedback (load-file "speedback.clj")}}
