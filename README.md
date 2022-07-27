@@ -22,9 +22,26 @@ They are tasks, defined in the file `bb.edn`. Think of running tasks with npm or
 
 The tasks/utils stored here are...
 
+### Pick 1
+
+To pick a name from a list (for example, to "volunteer" somebody to do some activity)
+
+`bb pick1 name1 name2 name3 name4`
+
+As you can see from `bb.edn`, it's a call to the native method `rand-nth`.
+
 ### Pull all (still uncompleted/WIP)
 
 To pull all the repositories, in this case the ones used by the PRM team.
+
+### Rota
+
+To create a permutation given a list of names, for example to create a single rota (for running standups or anything like that)
+
+`bb rota name1 name2 name3 name4`
+
+As you can see from `bb.edn`, it's a call to the native method `shuffle`.
+
 
 ### Speedback
 

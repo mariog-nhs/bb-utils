@@ -31,6 +31,4 @@
   (join "\n" (map format-line lines)))
 
 (println
- (if (some? *command-line-args*)
-   (-> *command-line-args* speedback-schedule format-schedule)
-   "Please pass some argument in :)"))
+ (-> *command-line-args* speedback-schedule format-schedule))

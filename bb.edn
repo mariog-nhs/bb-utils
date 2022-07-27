@@ -1,4 +1,16 @@
 {:min-bb-version "0.7.8"
  :tasks
- {pull-all (load-file "pull-all.clj")
-  speedback (load-file "speedback.clj")}}
+ {validate-input (when-not (some? *command-line-args*)
+                   (println "Please pass some argument in :)")
+                   (System/exit 1))
+  pick1 {:doc "Given a list, it returns a random item from it"
+         :depends [validate-input]
+         :task (-> *command-line-args* rand-nth println)}
+  pull-all {:doc "It pulls all PRM repos (WIP)"
+            :task (load-file "pull-all.clj")}
+  rota {:doc "Given a list, it returns a permutation"
+        :depends [validate-input]
+        :task (->> *command-line-args* shuffle (apply println))}
+  speedback {:doc "Given a list of names, it returns a combinations of all possible pairs. Useful for speedback schedules"
+             :depends [validate-input]
+             :task (load-file "speedback.clj")}}}
