@@ -5,6 +5,8 @@
 (def nhs-projects-dir "~/a-test-directory")
 
 (def projects ["prm-deductions-base-infra"
+               "prm-deductions-docker-openjdk-dojo"
+               "prm-docker-node-dojo"
                "prm-deductions-ehr-repository"
                "prm-deductions-gp-to-repo"
                "prm-deductions-infra"

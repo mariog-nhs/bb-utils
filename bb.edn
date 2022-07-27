@@ -7,10 +7,10 @@
          :depends [validate-input]
          :task (-> *command-line-args* rand-nth println)}
   pull-all {:doc "It pulls all PRM repos (WIP)"
-            :task (load-file "pull-all.clj")}
+            :task (load-file "./scripts/pull-all.clj")}
   rota {:doc "Given a list, it returns a permutation"
         :depends [validate-input]
         :task (->> *command-line-args* shuffle (apply println))}
   speedback {:doc "Given a list of names, it returns a combinations of all possible pairs. Useful for speedback schedules"
              :depends [validate-input]
-             :task (load-file "speedback.clj")}}}
+             :task (load-file "./scripts/speedback.clj")}}}
