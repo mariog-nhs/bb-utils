@@ -6,8 +6,6 @@
   pick1 {:doc "Given a list, it returns a random item from it"
          :depends [validate-input]
          :task (-> *command-line-args* rand-nth println)}
-  pull-all {:doc "It pulls all PRM repos (WIP)"
-            :task (load-file "./scripts/pull-all.clj")}
   rota {:doc "Given a list, it returns a permutation"
         :depends [validate-input]
         :task (->> *command-line-args* shuffle (apply println))}
